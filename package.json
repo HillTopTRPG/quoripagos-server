@@ -1,0 +1,33 @@
+{
+  "name": "quoripagos-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -t ES5 && cpx -C src/interoperability.yaml dist",
+    "node-server": "node --es-module-specifier-resolution=node dist/server.js",
+    "server": "npx ts-node src/server.ts",
+    "build-run": "npm run build && npm run node-server",
+    "minio-start": "minio server --address localhost:9000 /minio",
+    "version-up-server-lib": "kill -9 $(lsof -t -i:8000) & ncu && ncu -u quoripagos-server-core && npm install && npm run build && npm run node-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HillTopTRPG/quoripagos-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HillTopTRPG/quoripagos-server/issues"
+  },
+  "homepage": "https://github.com/HillTopTRPG/quoripagos-server#readme",
+  "dependencies": {
+    "quoripagos-server-core": "0.0.2",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "rimraf": "^3.0.2"
+  }
+}

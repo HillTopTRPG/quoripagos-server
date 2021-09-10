@@ -1,0 +1,12 @@
+# Quoripagosアプリケーションサーバ（このサーバ）のポート
+port: 8000
+
+# MongoDBの接続文字列
+mongodbConnectionStrings: mongodb://127.0.0.1:27017/
+
+# 設置できる部屋の数
+roomNum: 100
+
+# 部屋作成用パスワード
+# 空文字でない値を設定すると、部屋作成時にクライアント側で部屋作成パスワードが必要になります。
+roomCreatePassword: ""
