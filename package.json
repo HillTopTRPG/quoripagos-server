@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/HillTopTRPG/quoripagos-server#readme",
   "dependencies": {
-    "quoripagos-server-core": "0.0.2",
+    "quoripagos-server-core": "0.0.19",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
